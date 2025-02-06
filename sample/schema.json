@@ -1,0 +1,11 @@
+{
+    "type": "object",
+    "properties": {
+        "category": {
+            "type": "string"
+        },
+        "reason": {
+            "type": "string"
+        }
+    }
+}
