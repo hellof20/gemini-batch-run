@@ -3,3 +3,5 @@ __pycache__
 *.jsonl
 venv
 .DS_Store
+data_*
+sample_*

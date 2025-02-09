@@ -28,7 +28,7 @@ class GeminiClient:
                     temperature=self.config.temperature,
                     max_output_tokens=8192,
                     response_mime_type=self.config.response_mime_type,
-                    response_schema=self.config.response_schema
+                    response_schema=self.config.response_schema,
                     )
                 response = await asyncio.to_thread(
                     self.client.models.generate_content,

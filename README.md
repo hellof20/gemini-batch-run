@@ -23,23 +23,20 @@ streamlit run src/app.py
  ```
 
 2. 在 Web 界面配置以下内容：
-   
-   - Google Cloud 项目配置
-   - 模型参数设置
-   - 上传数据文件（CSV 格式）
-   - 配置提示词模板
-   - 设置响应模式（Schema）
+- Google Cloud 项目配置
+- 模型参数设置
+- 上传数据文件（CSV 格式）
+- 配置提示词模板
+- 设置响应模式（Schema）
 3. 点击"提交并处理"开始处理
 
 ## 配置说明
-### 环境变量
+### 参数配置
 - PROJECT_ID : Google Cloud 项目 ID
 - LOCATION : API 调用位置
 - MODEL : Gemini 模型名称
 - TEMPERATURE : 生成温度（0-1）
 - ChunkSize : 批处理大小
-- RESPONSE_MIME_TYPE : 响应类型
-- RESPONSE_SCHEMA_FILE : Schema 文件路径
 
 ### 提示词模板
 提示词模板支持文本和文件混合格式，使用特定语法：
@@ -78,6 +75,8 @@ FILE: {image_url},image/jpeg
  ```
 
 ### 输出Schema
+定义你希望输出结果的json格式：
+
 ```json
 {
     "type": "object",

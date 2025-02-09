@@ -40,7 +40,16 @@ def main():
         
         # 模型参数配置
         st.subheader("模型参数")
-        model = st.text_input("Model", "")
+        model = st.selectbox(
+            "Model",
+            [
+                "gemini-2.0-flash-001",
+                "gemini-2.0-flash-lite-preview-02-05",
+                "gemini-2.0-pro-exp-02-05",
+                "gemini-1.5-pro-002",
+                "gemini-1.5-flash-002"
+            ]
+        )
         temperature = st.slider("Temperature", 0.0, 1.0,0.8)
         chunk_size = st.number_input("Chunk Size", 1, 100,10)
 
