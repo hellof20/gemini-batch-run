@@ -13,7 +13,8 @@ from pathlib import Path
 class CustomFilter(logging.Filter):
     def filter(self, record):
         # 返回 False 表示过滤掉该日志
-        return "AFC is enabled with max remote calls" not in record.msg
+        return ("AFC is enabled with max remote calls" not in record.msg and
+                "AFC remote call 1 is done" not in record.msg)
 
 async def main():
     try:
