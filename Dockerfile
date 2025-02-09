@@ -17,7 +17,7 @@ COPY src/ ./src/
 RUN pip install --no-cache-dir -r requirements.txt
 
 # 设置环境变量
-ENV PYTHONPATH=/app
+ENV PYTHONPATH=/app/src
 
 # 暴露 Streamlit 默认端口
 EXPOSE 8080

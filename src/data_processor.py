@@ -34,7 +34,7 @@ class DataProcessor:
         original_df = pd.read_csv(self.config.filepath)
         
         for chunk_idx, df in enumerate(pd.read_csv(self.config.filepath, chunksize=self.config.chunk_size), 1):
-            logging.info(f"Processing chunk {chunk_idx}/{total_chunks}")
+            # logging.info(f"Processing chunk {chunk_idx}/{total_chunks}")
             results = await self.process_chunk(df)
             all_results.extend(results)
             
